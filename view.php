@@ -14,7 +14,7 @@ die("Error connection: ".sqlsv_errors());
 echo "<table border='1'>";
 
 $sql = "SELECT * FROM [dbo].[restaurantjay]";
-$getResults = sqlsrv_query($conn, $tsql);
+$getResults = sqlsrv_query($conn, $sql);
 
 if ($getResults == FALSE)
 {
