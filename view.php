@@ -8,6 +8,7 @@ if (!$conn)
 {
 die("Error connection: ".sqlsrv_errors());
 }
+echo "<table border='1>";
 $tsql= "SELECT * FROM [dbo].[restaurantjay]";
 $getResults= sqlsrv_query($conn, $tsql);
 if ($getResults == FALSE)
@@ -23,4 +24,8 @@ echo "<td>". $row['restaurant_address'] . "</td>";
 echo "<td>". $row['restaurant_phone'] . "</td>";
 echo "</tr>";
 }
+
+echo "</table>";
 sqlsrv_free_stmt($getResults);
+
+
